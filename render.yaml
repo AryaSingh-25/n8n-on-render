@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: n8n
+    env: docker
+    disk:
+      name: n8n-data
+      mountPath: /home/node/.n8n
+    envVars:
+      - key: N8N_BASIC_AUTH_USER
+        value: admin
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: mypassword123
+      - key: GENERIC_TIMEZONE
+        value: Asia/Kolkata
+      - key: WEBHOOK_URL
+        value: https://n8n-on-render.onrender.com
